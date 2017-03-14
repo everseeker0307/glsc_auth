@@ -1,0 +1,21 @@
+spring:
+    thymeleaf:
+        cache: false
+        suffix: .html
+        encoding: utf-8
+        content-type: text/html
+        mode: HTML5
+
+    datasource:
+        url: jdbc:mysql://localhost:3306/glsc_auth?characterEncoding=utf8&useSSL=false
+        username: root
+        password: Weiyang#0
+        driver-class-name: com.mysql.jdbc.Driver
+
+#    不采用mongodb的主要原因：不支持事务
+#    data:
+#        mongodb:
+#            uri: localhost:27017/glsc
+#            username: glsc
+#            password: glsc1212
+#            authentication-database: glsc

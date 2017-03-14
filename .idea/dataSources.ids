@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="glsc_auth" uuid="202d4bff-790b-4a10-8db5-a16ef8365e54">
+    <database-info product="MySQL" version="5.7.16" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+      <schema id="1" name="glsc_auth">
+        <visible>1</visible>
+      </schema>
+      <schema id="2" name="glsc_demo"/>
+      <schema id="3" name="information_schema"/>
+      <schema id="4" name="lianxi"/>
+      <schema id="5" name="mysql"/>
+      <schema id="6" name="performance_schema"/>
+      <schema id="7" name="sys"/>
+      <schema id="8" name="wxfc"/>
+      <table id="9" parent="1" name="privileges"/>
+      <table id="10" parent="1" name="roles"/>
+      <table id="11" parent="1" name="users"/>
+      <column id="12" parent="9" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="13" parent="9" name="name">
+        <data-type>varchar(32)|0</data-type>
+      </column>
+      <index id="14" parent="9" name="name">
+        <columns>name</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="15" parent="9" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <key id="16" parent="9" name="name">
+        <columns>name</columns>
+        <underlying-index>name</underlying-index>
+      </key>
+      <column id="17" parent="10" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="18" parent="10" name="name">
+        <data-type>varchar(32)|0</data-type>
+      </column>
+      <index id="19" parent="10" name="name">
+        <columns>name</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="20" parent="10" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <key id="21" parent="10" name="name">
+        <columns>name</columns>
+        <underlying-index>name</underlying-index>
+      </key>
+      <column id="22" parent="11" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="23" parent="11" name="name">
+        <data-type>varchar(32)|0</data-type>
+      </column>
+      <column id="24" parent="11" name="password">
+        <data-type>varchar(32)|0</data-type>
+      </column>
+      <index id="25" parent="11" name="name">
+        <columns>name</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="26" parent="11" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <key id="27" parent="11" name="name">
+        <columns>name</columns>
+        <underlying-index>name</underlying-index>
+      </key>
+    </database-model>
+  </data-source>
+  <data-source name="Mysql - @localhost" uuid="e3816ad4-937e-4ecb-b263-ab67b4bc1897">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

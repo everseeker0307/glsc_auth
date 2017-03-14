@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="glsc_auth" uuid="202d4bff-790b-4a10-8db5-a16ef8365e54">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <introspection-scope>glsc_auth:</introspection-scope>
+      <resolve-scope>glsc_auth:</resolve-scope>
+    </data-source>
+    <data-source name="Mysql - @localhost" uuid="e3816ad4-937e-4ecb-b263-ab67b4bc1897">
+      <secret-storage>master_key</secret-storage>
+      <first-sync>true</first-sync>
+    </data-source>
+  </component>
+</project>

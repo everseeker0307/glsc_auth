@@ -12,7 +12,7 @@ import java.util.Set;
  */
 public interface UserRepository {
     @Insert("insert into users(name, password) values(#{name}, #{password})")
-    void addUser(User user);
+    void save(User user);
 
     @Select("select * from users where name = #{name}")
     User getUserByName(@Param("name") String name);

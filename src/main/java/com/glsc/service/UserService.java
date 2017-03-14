@@ -14,7 +14,7 @@ import java.util.Set;
 /**
  * Created by everseeker on 2017/3/14.
  */
-@Component("userService")
+@Component
 public class UserService {
     @Autowired
     private UserRepository userRepository;

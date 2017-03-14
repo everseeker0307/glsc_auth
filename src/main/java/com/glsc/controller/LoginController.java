@@ -22,8 +22,7 @@ public class LoginController {
     }
 
     @RequestMapping("/hello")
-//    @PreAuthorize("authenticated and hasAnyAuthority('client_r', 'client_w')")
-    @PreAuthorize("authenticated and denyAll()")
+    @PreAuthorize("authenticated and hasAnyAuthority('client_r', 'client_w')")
     public String hello() {
         return "hello";
     }

@@ -17,9 +17,5 @@ public interface UserRepository {
     @Select("select * from users where name = #{name}")
     User getUserByName(@Param("name") String name);
 
-    @Select("select role_name from users_roles where user_name = #{userName}")
-    Set<String> getRolesByName(@Param("userName") String userName);
 
-    @Select("select privilege_name from users_privileges where user_name = #{userName}")
-    Set<String> getPrivilegesByName(@Param("userName") String userName);
 }

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Hello World!</title>
+    <title th:text="${username}">index</title>
 </head>
 <body>
-<h1>Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+<h1>Hello <span th:text="${username}"></span></h1>
+<h2>You own privileges: </h2>
+<div><h2 th:each="privilege : ${privileges}"><span th:text="${privilege}"></span></h2></div>
 <form th:action="@{/logout}" method="post">
     <input type="submit" value="注销"/>
 </form>

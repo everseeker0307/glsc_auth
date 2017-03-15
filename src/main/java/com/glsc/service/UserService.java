@@ -1,9 +1,6 @@
 package com.glsc.service;
 
-import com.glsc.dao.RoleRepository;
-import com.glsc.dao.UserPrivilegeRepository;
-import com.glsc.dao.UserRepository;
-import com.glsc.dao.UserRoleRepository;
+import com.glsc.dao.*;
 import com.glsc.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -30,12 +27,19 @@ public class UserService {
     @Autowired
     private UserPrivilegeRepository userPrivilegeRepository;
 
+    @Autowired
+    private RolePrivilegeRepository rolePrivilegeRepository;
+
     public void addUser(String username, String password) {
         userRepository.save(new User(username, new BCryptPasswordEncoder().encode(password)));
     }
 
     public User getUserByUserName(String userName) {
         return userRepository.getUserByName(userName);
+    }
+
+    public Set<String> getRolesByUserName(String userName) {
+        return userRoleRepository.getRolesByUserName(userName);
     }
 
     @Transactional
@@ -50,9 +54,9 @@ public class UserService {
     @Transactional
     public Set<String> getAllPrivilegesByUsername(String userName) {
         Set<String> set = new HashSet<>();
-        set.addAll(userRepository.getPrivilegesByName(userName));
-        for (String roleName : userRepository.getRolesByName(userName))
-            set.addAll(roleRepository.getPrivilegesByName(roleName));
+        set.addAll(userPrivilegeRepository.getPrivilegesByUserName(userName));
+        for (String roleName : userRoleRepository.getRolesByUserName(userName))
+            set.addAll(rolePrivilegeRepository.getPrivilegesByRoleName(roleName));
         return set;
     }
 }
